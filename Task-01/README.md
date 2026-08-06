@@ -16,13 +16,20 @@
 - ```git commit --amend --no-edit --date="1987-08-03"```: overrides timestamp of commit too
 - ```git rebase -i HEAD~3^```: Enables editing last 3 commits. basically a more powerful ```commit --amend```.
 - ```git rebase --continue```: I guess thats for continuing the commit edit chain. Idk git told me to run it.
-- ```hhh```
+- ```git reflog```:will show all commit history
+- ```q```: exits from git reflog 🥲. pretty stupid fix 😭.
+- ```git reset --hard "e73b6b3"```: points to the commit with sha "e73b6b3"
+- ```git reset HEAD~1```: resets to previous commit. I tried ```git reset HEAD@{}``` but then i found out that it refers to my current state not my previous commit.
+- ```git rebase --interactive```: lets you do rebase interactively per commit. To squash n+1 commits to one, have 1st commit as pick and the rest n commits as squash. Rebase lets you reapply commits on other base tips.
+- ```git add --chmod=+x script.sh```: stages permission change of "executable" (+x) for script.sh
+- ```git add -p```: lets you stage interactively. entering "s" splits the hunk into smaller parts.
+- ```git cherry-pick```: lets you rearrange commits linearly. I had to resolve a merge conflict in this exercise too.
+- ```git rebase --onto your-master issue-555 rebase-complex```:  lets you rebase. Basically, in simple terms, lets you place ```rebase-complex``` on ```your-master``` while ignoring ```issue-555```.
+- ```git log -S word```:search for commits that introduced word.
+- ```git bisect start```:git bisect does a binary search so that we can find problematic commits
+- ```git bisect bad```:tells the bisect to mark it as a bad commit. no argument means current head is considered as bad.
+- ```git bisect good 1.0```:tells the bisect the commit we know is good. here the commit labelled 1.0 is good.
+- ```git bisect run sh -c"command"```: helps to automate the checking. otherwise we would have to manually go across each commit bisect gives us, run the openssl command and mark the commit as good or bad each time. This particular exercise took 7 iterations. 
 
-
-
-git clone https://gitexercises.fracz.com/git/exercises.git
-cd exercises
-git config user.name "Rajiv"
-git config user.email "rajiv.a.r@outlook.com"
-./configure.sh
-git start
+## Certificate
+![](p1.png)
