@@ -1,10 +1,6 @@
 # Task-05 : Grand Line Guardian
 ## Approach
-I saw the discussion on discord about this task and hence found /proc. I looked into the official docs of /proc. I decided which language and library i was going to use for this project from the blog listed below.
+One of the main challanges of this was deciding which language i had to choose. Initially I thought of go and bubbletea for the task, but halfway through, it got too complicated and i tried switching to python using async for asynchronous updation of the values but there I felt that it was also very limited in capabilites. So i switched back to golang. but the same problem arised and I was stuck. But then I heard about the curses module. So i used python and the curses module
 ## Resources
-Learning about the /proc filesystem:
 https://docs.kernel.org/filesystems/proc.html
-Deciding which library i want to use:
-https://blog.logrocket.com/7-tui-libraries-interactive-terminal-apps/
-Learning how to make tui apps in go using bubbletea (the library i chose):
-https://youtu.be/_gzypL-Qv-g?si=oyEPlUE1zG4dAFOU
+https://docs.python.org/3/howto/curses.html
